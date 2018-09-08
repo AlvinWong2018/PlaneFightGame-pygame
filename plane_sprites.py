@@ -37,7 +37,6 @@ class Background(GameSprite):
         if is_alt:
             self.rect.y = -self.rect.height
 
-
     def update(self):
         super().update()
 
