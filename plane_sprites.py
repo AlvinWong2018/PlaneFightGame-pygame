@@ -9,6 +9,9 @@ FRAME_PER_SEC = 60
 CREATE_ENEMY_EVENT = pygame.USEREVENT
 # 英雄发射子弹事件
 HERO_FIRE_EVENT = pygame.USEREVENT + 1
+# 移动速度
+MOVE_SPEED = 3
+
 
 class GameSprite(pygame.sprite.Sprite):
     """Plane War Game Sprite"""

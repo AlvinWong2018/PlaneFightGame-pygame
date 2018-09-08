@@ -9,7 +9,7 @@ class PlaneGame:
         self.clock = pygame.time.Clock()
         self.__create_sprites()
 
-        pygame.time.set_timer(CREATE_ENEMY_EVENT, 600)
+        pygame.time.set_timer(CREATE_ENEMY_EVENT, 400)
         pygame.time.set_timer(HERO_FIRE_EVENT, 100)
 
     def __create_sprites(self):
@@ -34,16 +34,16 @@ class PlaneGame:
 
         keys_pressed = pygame.key.get_pressed()
         if keys_pressed[pygame.K_RIGHT]:
-            self.hero.rect.x += 3
+            self.hero.rect.x += MOVE_SPEED
 
         elif keys_pressed[pygame.K_LEFT]:
-            self.hero.rect.x -= 3
+            self.hero.rect.x -= MOVE_SPEED
 
         elif keys_pressed[pygame.K_UP]:
-            self.hero.rect.y -= 3
+            self.hero.rect.y -= MOVE_SPEED
 
         elif keys_pressed[pygame.K_DOWN]:
-            self.hero.rect.y += 3
+            self.hero.rect.y += MOVE_SPEED
 
         else:
             self.hero.speed = 0
